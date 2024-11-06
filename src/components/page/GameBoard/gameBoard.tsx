@@ -1,7 +1,7 @@
 import React from "react";
 
-const GameBoard = () => {
-  return <></>
+export const GameBoard = () => {
+  return <>test</>
 }
 
 export default GameBoard;
