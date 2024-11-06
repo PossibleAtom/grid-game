@@ -1,7 +1,8 @@
 import React from "react";
+import styles from './boardGrid.module.css'
 
-const PlacableBlock = () => {
-  return <></>
+export const BoardGrid = () => {
+  return <div className={styles.Grid}>test</div>
 }
 
-export default PlacableBlock;
+export default BoardGrid;
