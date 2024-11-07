@@ -7,6 +7,7 @@ import { PlaceableMenu } from "../../gameObjects/placableSelector/placeableMenu"
 export interface Placeable {
   name: string;
   color: string;
+  fileName: string;
 }
 
 export const GameBoard = () => {

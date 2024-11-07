@@ -13,5 +13,9 @@ const CellContainer = styled.div<{$contentColor?: string; }>`
 
 export const Cell = ({selectedPlaceable}: CellProps) => {
   const [content, setContent] = React.useState(undefined as  Placeable | undefined);
-  return <CellContainer $contentColor={content?.color} onClick={() => setContent(selectedPlaceable)} className={styles.Cell}/>
-}
+  const image = content ? <img src={`${process.env.PUBLIC_URL}/images/${content?.fileName}.png`} alt={content?.fileName} />: <></>
+  return (
+  <CellContainer $contentColor={content?.color} onClick={() => setContent(selectedPlaceable)} className={styles.Cell}>
+    {image}
+  </CellContainer>
+)}

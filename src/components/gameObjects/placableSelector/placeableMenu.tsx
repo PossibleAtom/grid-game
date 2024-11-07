@@ -10,12 +10,14 @@ interface PlacableMenuProps {
 export const PlaceableMenu = ({selectedPlaceable, setSelectedPlaceable}: PlacableMenuProps) => {
   const placables: Placeable[] = [
     {
-      name: 'example 1',
+      name: 'Fire Tile',
       color: 'red',
+      fileName: 'Fire',
     },
     {
-      name: 'example 2',
+      name: 'Water Tile',
       color: 'blue',
+      fileName: 'Water'
     }
   ]
 
@@ -25,7 +27,10 @@ export const PlaceableMenu = ({selectedPlaceable, setSelectedPlaceable}: Placabl
 
   const generatePlaceables = () => {
     return placables.map((placeable) => {
-      return (<button onClick={() => selectPlaceable(placeable)}>{placeable.name}</button>)
+      return (<button onClick={() => selectPlaceable(placeable)}>
+        {placeable.name}
+        <img src={`${process.env.PUBLIC_URL}/images/${placeable.fileName}.png`} alt={placeable.fileName}/>
+        </button>)
     })
   }
 
@@ -33,6 +38,7 @@ export const PlaceableMenu = ({selectedPlaceable, setSelectedPlaceable}: Placabl
   <div className={styles.PlacableMenu}>
     <h1>Placeables</h1>
     <p>Selected: {selectedPlaceable?.name || 'none'}</p>
+
     <div className={styles.SelectionMenu}>
       <button onClick={() => selectPlaceable(undefined)}>clear</button>
       {generatePlaceables()}
