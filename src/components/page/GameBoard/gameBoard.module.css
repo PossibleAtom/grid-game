@@ -1,0 +1,6 @@
+.BoardContainer {
+  margin: 16px;
+  border: solid 2px blue;
+  display: flex;
+  justify-content: center;
+}

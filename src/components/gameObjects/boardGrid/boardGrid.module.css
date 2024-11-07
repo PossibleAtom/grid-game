@@ -1,0 +1,7 @@
+.Grid {
+  background-color: slategray;
+}
+
+.GridRow {
+  display: flex;
+}

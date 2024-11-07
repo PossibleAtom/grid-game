@@ -1,0 +1,11 @@
+.PlacableMenu {
+  background-color: #DFDFFF;
+  padding: 16px;
+  margin: 0px 16px;
+}
+
+.SelectionMenu {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
